@@ -23,6 +23,7 @@ function sectionize (node, ancestors) {
   const start = node
   const depth = start.depth
   const parent = ancestors[ancestors.length - 1]
+  const id = node.data.id;
 
   const isEnd = node => node.type === 'heading' && node.depth <= depth || node.type === 'export'
   const end = findAfter(parent, start, isEnd)
@@ -40,7 +41,10 @@ function sectionize (node, ancestors) {
     depth: depth,
     children: between,
     data: {
-      hName: 'section'
+      hName: 'section',
+      hProperties: {
+        id: `${id}-section`,
+      },
     }
   }
 
