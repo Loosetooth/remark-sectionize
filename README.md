@@ -1,3 +1,6 @@
+To install:
+`yarn add https://github.com/Loosetooth/remark-sectionize/tarball/master`
+
 # remark-sectionize
 
 This is a [remark](https://github.com/remarkjs/remark) plugin to wrap each
